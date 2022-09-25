@@ -1,0 +1,518 @@
+Comments :
+    // is used to write comments in Javascript programs 
+    and for multiline comments use 
+    /* write
+    anything
+    any comments */
+
+Data types in javascript : undefined, boolean, null, string, symbol, number and object;
+
+creating a variable use "var", "let", "const" 
+//  They are case sensitive;
+var : can be used anywhere in the whole code ;
+let : only to be used i a perticukar function;
+const : which cannot be changed anyway and remains constant;
+
+their are two types of variables 
+- assigning variable and 
+- creating variable (here you also assign the value to the variable);
+ex: var a = 9;
+_____________________________________________________________________________________________________________________________________________
+
+math operations on numbers : "+" "-" "*" "/" are used; 
+remainder operator "%" : gives the remainder of the operation 
+
+a = a + 12;
+a = a - 12;
+a = a * 12;
+a = a / 12;
+we can write : a += 12;
+and can write : a -= 12;
+and can write : a *= 12;
+and can write : a /= 12;
+_____________________________________________________________________________________________________________________________________________
+
+Escape character (\) : if you want ot write quotes inside a string
+we can write it as :- 
+    "I am a \"Double Quoted\" sting Inside a \"double Quote\""
+another method to do this is you can write the string inside a single quote too:
+    'I am a "Double Quoted" sting Inside a "double Quote"'
+another method to do this is you can write the string inside a backticks:
+    `I am a "Double Quoted" sting Inside a "double Quote"`
+
+some more such backshash operations : 
+    \' : single quote;
+    \" : double quote;
+    \\ : backslash
+    \n : newline
+    \r : carriage return;
+    \t : tab (four spaces);
+    \b : backspace;
+    \f : form feed 
+
+concatination : of string can be done using : "+" sign: 
+ex : "Hello" + "Boi"
+We can also use "+=" operator; 
+
+Appending variables to the string : use += operator 
+ex :
+    var str1 = "hello";
+    var str2 = " world";
+    str1 += str2; 
+
+string length: we can use .length function:
+ex : var str = "hello World!";
+    var length = str.length;
+
+string Indexing which starts from 0 and goes to length - 1 of the string 
+in string "Hello" 
+index of H - 1
+index of e - 2
+index of l - 3... and so on
+
+strings are immutable they cannot be changed we can change the whole string but 
+cannot change the perticular letter in the string 
+
+One more method to get the last second letter of the string :
+    var str = "some random string";
+// -2 because -1 is the last letter of the string  
+    console.log(str[str.length - 2]);
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Array; helps in storing data of any data type they are data seperated by commas (,) and enclosed in 
+square brackets     
+ex :  var arr = [19, "string", 13.55];
+
+You can also create nested arrays
+ex : var arr-nested = [["arr", 16], [133, "something"]] 
+
+we can access the elements in the array using indexes 
+ex : var myArray = [123, "some text", 16.66]
+    var first_element = myArray[0];
+    var second_element = myArray[1]; 
+
+You can also modify the elements of the array i.e. Arrays are mutable 
+ex : var myArray = [123, 11, 156];
+    myArray[0] = 150;
+// this will change the first index of the array to 150
+
+use multiple brackets to access multi dimentional arrays 
+ex : myArray = [[125, "str", 13.3], ["some text", "another text", 122]]
+    myArray[1][2];
+
+manipulating the array using different operations : 
+1. Push(some-value) : just like append we can add elements at the last of the array;
+ex: myArray = [12, "some", 12.33];
+myArray.push("new-element")
+
+2. pop() : it will remove the last element from the array 
+3. shift() : similar to the pop function but it will remove the first element of the array 
+4. unshift(some-value) : just same as push it addes the element to the first index 
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+functions: functions are the set of code assigned to a name which can be called upon by any elemnt in the code: 
+name if the function name assigned to the functtion 
+syntax -    function name (arguments){
+                ....
+                } 
+ex: function greet(){
+    console.log("hey i am happy just like banana !!");
+}
+greet();
+
+is called function call either can have arguments into round brackets.
+
+arguments are some inputs given to the function they are local variales 
+which are created and distroyed with the function 
+ex: function add(a, b){
+        var c = a + b;
+        return c;
+    }
+
+Local variable : declared inside the function and are under the finction scope only 
+global variables : the variable which are declared outside the function and can be 
+    acessed by any function or entity inside the code
+// It is possible to have local and global variables with the same name in this case the local one will 
+// overimpose the global variable 
+
+Return statement : it is written as 
+    return ...
+it says about what value the function returns it can be number, string, object, array, or boolean 
+it is not necessary to define return value 
+
+return undefined;
+// here undefined is a keyword not a string  
+
+stand in Line : when a data is added to the array it is added to the last index and the 
+zeroth index is replaced by the first one and so on i.e. the total elements in the array remains constsnt 
+    var arr = ["soem", "text", "written"]
+    
+    function stand-in-line (array, val){
+        array.push(val);
+        array.pop();
+        array.shift();
+        array.unshift("something");
+    }
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Booleans 
+    they are data types which hold only two value Either - "True" or "False"  
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Conditional statements : if is the keyword for the conditional stamenets they have a condition when it is true 
+    the code inside the culey brackets is exicuted;
+
+syntax: if (condition) {
+        ....... // code 
+        return value; //optional
+    }
+
+equality operator : "==" double equal to sign will represent the equality and returns boolean value.
+strict equality operator : "===" here we also check the data type of the variable and match them.
+i.e. 3 === 3    is true 
+     3 === '3'  is false 
+but  3 == '3'   is true 
+
+Inequality operator : "!=" not equal to , this check the condition not equal to and returns boolean 
+strict Inequality operator : "!==" not equal to , this check the condition without type conversion not equal to and returns boolean 
+
+greater then operator : ">" 
+greater then or equal to operator : ">=" 
+Less then operator : "<" 
+Less then or equal to operator : "<=" 
+
+to check two condition we can use nested if conditions but smarter way to do that is using & operator 
+It checks two conditions simultaneously : if (val > 67 && val < 123) 
+
+else statement :-
+    if (condition){
+        code.....
+     } else {
+        code....
+     }
+
+else if statement:-
+    if (condition){
+        code.....
+    }else if (condition){ 
+        code......
+    }else {
+        code....
+    }
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+switch stamenets: just to add multiple condition for a perticular change of value.
+
+// here val means the value of the paraeter for that perticular switch.
+//case val also means parameter === val
+// as shown you can add multiple cases for a perticular switch.
+// if break statement is absent the next case will also be implimented automatically.
+
+switch (parameter){
+    case val:
+        code....
+        break;
+        
+    case val:
+        code....
+        break;  
+            
+    case val:
+        code....
+        break;  
+}
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Javascript objects : objects here are same to the array in c++ we have different properties to 
+    access the values within an object 
+
+var name = {
+    "property":value,
+    "property":value,
+    "property":value
+};
+
+// can also be weitten as:
+var name = {
+    1 :value,
+    2 :value,
+    3 :value
+};
+
+here property is used to access the value assigned to that,
+value here can be anything it can be an integer, a string, an array 
+
+now to get the value of a certain property in the object we use "." notation;
+
+var variable = name.property; 
+
+we can also use the bracket notation : it is used when the key has spaces in it.  
+
+var variable = name["property"]; 
+
+we can change our object : Add values 
+
+var object = {
+    "some" : "something",
+    "again some" : "some some",
+    "array" : ["one", "two", "three"]
+}
+
+// so cnage this 
+object.some = "SOMETHINGS";
+
+// adding new properties: 
+object.[new property] = "new one";
+
+// to delete some of the property.
+delete object.some;
+
+
+-----------------------------------------------------------------------------------------------------------
+Exercise: write a code to check weather a property exists or not in your object,
+
+    var myObject = {
+        "one" : "some-one",
+        "two" : "Some-two",
+        "Three" : "Some-three",
+        "four" : "Some-four"
+    }
+
+    function checkProperty (prop){
+        if (myObject.hasOwnProperty(prop)){
+            return "yes it has the property";
+        } else{
+            return " no such property exists";
+        }
+    }
+-----------------------------------------------------------------------------------------------------------
+we can also define arrays containing objects : 
+    var myArray = [
+        {
+            "object": 90,
+            "objec": 900,
+            "obje": 9000
+        },
+        ["some", "another", "array"]
+    ]
+
+// Now you can make it as complex as you want.
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+While loop : it is run wuntil a perticular condition is true.
+
+    while (condition){
+        code...
+        change in condition
+    }
+// change in condition means that like if the condition i < 22;
+// we can change i by i-- or i++
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+For loop
+    
+    for (initialisation; condition; change){
+        code...
+    }
+// here the for loop is runned till the condition is true.
+
+example:     for (var i = 0; i < 5; i++){
+                console.log("* ")
+            }
+
+---------------------------------------------------------------------------------------------------------------
+using for loop print the elements of the array  
+
+    var myArray = [2, 4, 6, 8, 10];
+
+    for (var i = 0; i < myArray.length; i++){
+        console.log(myArray[i]);
+    }
+---------------------------------------------------------------------------------------------------------------
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Do while loops : it will first run the loop omce then check weather condition is true or false 
+    if the condition is false still the loop was runned once atleast
+
+do{
+    code....
+} while(condition)
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Math.random function 
+this is a inbuilt function of javascript which gives us some random intiger values 
+
+// this will give us any random number between 0-1 but NOT "zero" and NOT "one" 
+console.log(Math.random());
+
+// in orger to get a random whole number 
+// math.floor is used to find the nearest whole number of decimal place  
+Math.floor(Math.random() * 10)
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+parseInt function : converts the string into intiger if it cannot be done we get naN as result
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+ternary operator : Like on line if else statement
+
+    condition ? statement-if-true : statement-if-false;
+
+ex :    return a === b ? "yes" : "No";
+// replace this by : return "yes"       if the condition is true
+// replace this by : return "No"        if the condition is Not true
+
+we also have nested ternary operators :
+
+    return num > 0 ? "positive" : num < 0 ? "Negative" : "Zero";
+___________________________________________________________________________________________________________________________________________________________________________________________
+ 
+var name = "atharv";
+var name = "atharv vyas"
+
+// here this is possible coz var allows to declare the variable twice and change its value But 
+
+let name = "atharv"
+let name = "atharv vyas"
+
+// throws an error coz let dose not allow us to do multiple declarations 
+// to do so we have a simple change dont declare let gain and again 
+
+name = "atharv vyas"
+
+// Now this is going to work definately 
+
+
+when we declare "var" is declared globally 
+but let is used to delare the variable locally 
+
+
+    var i = "out";
+
+    function scope (){
+        i = "in";
+        console.log("inside", i);
+    }
+    scope();
+    console.log("outside", i);
+
+Output : inside in  
+        outside in 
+
+// this shows that the var once changed is changed 
+// but if you replace "var" with "let"
+
+    let i = "out";
+
+    function scope (){
+        let i = "in";
+        console.log("inside", i);
+    }
+    scope();
+    console.log("outside", i);
+
+Output : inside in  
+        outside out 
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+another method used to declare variable is "const" : here we cannot chage the value once assigned 
+
+const pi = 3.14;
+
+pi = 23;
+// will give error 
+
+though we cant change const variable we can mutatte the array using array functions like push, pop..
+
+even though we use const declaration for functions the values inside can be changed so to prevent this changing we use :
+
+    object.freeze(object-name); // this will prevent the changing of the object 
+
+    const constants = {
+        "pi" : 3.4
+    }
+    object.freeze(constants);
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+arrow functions : 
+// here the function is called anonymous function which dose not have any name now it is the best practice to convert a anonymous function into an arrow function 
+    var objjj = function(){
+        return "hello";
+    }; 
+// can be replaced by 
+    const objjj = () => "hello";
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+when have already assigned some value to "val" so even if val argument is not given it will be considered as 1 
+but if it is given then will take that value
+    function increment (num, val = 1){
+        return num + val;
+    }
+
+    console.log(increment(5))
+    console.log(increment(5,6))
+
+
+if we dont know the number of arguments given just use :
+
+    function some (...args){
+    console.log(args);
+};
+
+some(2,3,52,150);
+// here we will the the array of given inputs 
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+another way to write strings :
+// using "backticks"
+// using $ sign we can write variables inside the string 
+var str = `It is a string ${variable} and again ${anotherVariable}`;
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+// here using underscore means that the variable is only accasable inside the class
+// underscore will tell you that it is a private variable 
+class book {
+    constructor(author){
+        this._author = author;
+    }
+
+    // getter
+    get writter () {
+        return this._author;
+    }
+
+    //setter
+    set writter(updateAuthor){
+        this._author = updatedAuthor;
+    }
+}
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+import and export 
+
+first we need to export the object, class, or function which we want to import into another js file 
+we use 
+
+in file timepass.js
+    export const name = function_name;
+            or 
+    export { function_name };
+
+in file sample.js
+import { somethins } from "./timepass";
+
+        or to import everything
+
+import * as object_Name from "./fileName"; 
+
+
+we have some default exports used to export the whole individual function
+
+    export default function name () {
+        code ...
+    }
+
+// and to import the default export
+
+    import name as anotherName from "fileName";
+// here we have not used curly brackets for name because it is default export 
+___________________________________________________________________________________________________________________________________________________________________________________________
