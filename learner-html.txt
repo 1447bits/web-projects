@@ -1,0 +1,401 @@
+HTML and CSS are languages for front end 
+for Back end we have more languages like PHP, ASP, JAVA, Python, Rudy...
+what is DOCTYPE !! (to the browser)
+    doctype is used to display the type of documents , example it can be a html doc or math doc .. etc
+    <!DOCTYPE html> shows that the website is written in Html-5 
+
+<hr>
+
+Element and attributes :
+    Element : everything that you can see as a user 
+    Attribute : Additional information about the elements
+
+to declare element we define a tag 
+"<tag attribute1="value" atribute2="value" > tag content </tag>"
+the above thing is called a element and there you can also see the attributes ;)
+        code!
+            <p>
+                here we skip all the extra spaces and html removes all the extra spaces even if you write   nin new line it is going to appear in same line coz html's 'p tag' for spacong we have to use "br" tag or "hr" tags 
+            </p>
+            <pre>
+                here we dont have any elemination here as we write the same text is visible at the end
+                for example if i want to skip two lines below this 
+                
+                
+                just press enter twice (i mean skip two lines as you do)
+                if i want to add multile spaces just add "                       " as much spaces you want
+            </pre>
+        /code
+
+Html formatting 
+    <pre>
+        <b> this will bold the scentence written between the tag </b>
+        <i> this will italic the scentence written between the tag </i>
+        <strong> this will also bold the scentence written between the tag but it has a significance with SEO point of view </strong> <--bohot jyada bhi use nahi karna hia bass thoda sa ep para me 2-3 MAX-->
+        <em> same it also italic the scentence written betwneen and shows the emphasise of written thing while SEO </em>
+        <small> it will dec the font size of text </small>
+        <mark> html ka highlighter :) </mark>
+        <del> matlab likha tha k=lakin pasand nahi aaya to kaat diya </del>
+        <ins> html ka underline </ins>
+        X <sub> 2 </sub> <--subscript tag-->
+        X <sup> 2 </sup> <--superscript tag-->
+        <q> this will enclose this scentence into double quotes and will style it in italic </q>
+        <blockquote cite="..."> kisi aur ka quotes use karte ho hehe (run kar k dekh le na bhai) </blockquote>
+        <--ab jaha se uthaya hai vaha ka adress dal dena cite "attribute" me -->
+        <abbr tittle="world health organisation"> WHO </abbr> abbar nahi abbrivation matlab jaise PKMB (full form to pata hi honga ;) ) to represent abverated words 
+        <address> Seo k liye BASSSS </address>
+    </pre>
+
+<hr>
+
+html redirecting ; when you want to redirect something to another page (abe ancher tag)
+    <a href="..." target="_blank" tittle="when you hover on the link this will be shown" > link </a>
+    <--target="_blank" will open the link in new tab when clicked-->
+local links
+    <a href="#something"> link </a>
+    <--here "something" is a id assigned to some local paragraph so whrn link is clicked it will redirect user to "something"-->
+    <p id="something"> kuchh ot linka hua hai </p>
+    <p"> kuchh ot phir se likha hua hai </p>
+E-mails
+    <a href="mailto:abcd@gmail.com> my email </a>
+you can also add pre definaed subject 
+    <a href="mailto:abcd@gmail.com?subject=this is a subject"> my email </a>
+
+add images :-
+    <img src="..." alt="..." height="..." width="...">
+
+html lists : of two types 1. ordered list (<ol></ol>), 2. unordered list (<ul></ul>) 
+here in a ordered list we write lits items in li tag
+by default it is numeric i.e. it shows like 1.
+                                            2. 
+                                            3.
+to change its start ue use atribute start="..."
+type="1" for numbered lists 
+type="A" for capital letters 
+type="a" for small letters 
+type="I" for capital roman numbers
+type="i" for small roman numbers 
+       
+        <ol start="5">
+            <li>coffee</li>
+            <li>tea</li>
+            <li>chai</li>
+            <li>milk</li>
+            <li>cold coffee</li>
+        </ol>
+
+Now for unordered list : it is same as ordered list but instead of numbers or alphabets we have bullets 
+here to change the bullet style we use style="..."
+style="list-style-type: disc" for circle which is filled 
+style="list-style-type: circle" for circle which is not filled 
+style="list-style-type: square" for square which is filled 
+style="list-style-type: none" shows nothing  
+       
+        <ul>
+            <li>something</li>
+            <li>something1</li>
+            <li>something2</li>
+            <li>something3</li>
+            <li>something4</li>
+        </ul>
+
+Nested lists (itna bhi nahi aata to chod do phir)
+
+
+Discription list: here you can give discription to yoour list items which are going to be visible in output page
+        <dt> 
+            <di>Item1</di>
+                <dd>it is item one </dd>
+            <di>Item2</di>
+                <dd>it is item two </dd>
+        </dt>
+
+<hr>
+
+Tables : horizontal (ROWS) Vertical (COLUMNS)
+table row tag is used to create rows in table(<tr></tr>)
+then we define columes inn each row (<td></td>)        
+border="2" (this atribute is defined in pixels (2 means 2 pixels))
+caption tag is used to give a caption obv'ly :)
+<table border="1">
+    <caption><b>this is a table</b></caption>
+    <tr>
+        <th>heading1</th>
+        <th>heading2</th>
+        <th>heading3</th>
+    </tr>
+    <tr>
+        <td>data 1</td>
+        <td>data 2</td>
+        <td>data 3</td>
+    </tr>
+    <tr>
+        <td>data 4</td>
+        <td>data 5</td>
+        <td>data 6</td>
+    </tr>
+    <tr>
+        <td>data 7</td>
+        <td>data 8</td>
+        <td>data 9</td>
+    </tr>
+</table>
+
+to combine two or more columns use colspan="n" (where n is the number of columns you want to merg)
+to combine two or more rows use rowspan="n" (where n is the number of rows you want to merg)
+<table border="1">
+    <tr>
+        <td colspan="3" ><pre>      heading   </pre></td>
+        <!-- <td>data 2</td>
+            <td>data 3</td> -->
+        </tr>
+        <tr>
+            <td rowspan="3">data 4</td>
+            <td>data 5</td>
+            <td>data 6</td>
+        </tr>
+        <tr>
+            <td>data 7</td>
+            <td>data 8</td>
+            <!-- <td>data 9</td> -->
+        </tr>
+        
+    </table> 
+    
+for better uunderstanding of search engine (Browser) we can enclose whole heading in (<thead></thead>) 
+and rest body in (<tbody></tbody>)
+also have a thing named (<tfoot></tfoot>) which is the used in last row 
+
+similarly are Nested tables (phir se ye to aana chahiye ;) ) 
+
+
+DIV and SPAN
+Div force the next thing to start from next line (SPAN Don't)
+    <div>this is a div tag</div>
+    <div>this is a div tag</div>
+    <span>this is a span tag  </span>
+    <span>this is again a span tag  </span>
+    
+div will occupy whole width of the page (while span will occupy only the content space)
+    <div style="border:2px solid red;" >this is a div tag</div><br>
+    <span style="border:2px solid red;" >this is a span tag  </span>
+
+<hr>
+
+iframe : it is used to show aother website view in yuour website :)
+    <iframe src="..." height="..." width="..."></iframe>
+
+<hr>
+
+add audio 
+<audio controls>
+    <!-- type of mp3 file is written as filename/mpeg -->
+    <!-- and for ogg format filename/ogg -->
+    <source src="..." type="...">
+    <!-- if audio file is not supported then -->
+    audio is not supported by your browser 
+</audio>
+
+add video   
+    <video width=".." height=".." controls>
+        <source src="..." type="...">
+    </video>
+
+    <video autoplay>
+        <source src="..." type="...">
+    </video>
+
+
+<hr>
+
+now to add pdf into your webpage ...
+remember the type for pdf is "application/pdf"
+embed tag
+    <embed src="..." type="applicarion/pdf" width="..." height="...">
+iframe 
+    <iframe src="..." width="..." height="..." frameborder="0"></iframe>
+object (here we have data instead of src)
+    <object data="..." width="..." height="..." type=""></object>
+
+to add youtube video in your website 
+open video on browser - click share - EMBED - copy the "iframe" codde
+
+simillarly you can add google maps 
+open maps - fo to the location - share - EMBED - copy the code 
+
+<hr>
+
+HTML entities when you want to write some html code and it has to be shown on your webpage 
+you can use html quantities to show up researved keywords on your webpage
+
+<!-- by name -->
+<!-- to show "<div>" on display -->
+    &lt;div&gt;
+    "&lt" = < and "&gt" = >
+    
+<!-- by number  -->
+<!-- to show "<div>" on display -->
+    &#60;div&#62;
+
+<hr>
+
+HTML symbols (on google just type html symbols :) )
+    &#8704;
+    &#8706;
+    &#8707;	
+    etc...
+    
+To add emojies :) on google just type "emojies in html"
+    &#128516;
+
+<hr>
+
+NEW SEMENTIC ELEMENTS IN HTML-5
+they are kind of replacement for div in seasy ways 
+    <article>   (if you want to write a article)
+    <aside>     (if you want to add a sidebar)
+    <details>   (to add detail to something)
+    <figcaption> 
+    <figure>    (wrapper for an image )
+    <footer>    (footer to pata hi honga na yar)
+    <header>    (header to pata hi honga na yar)
+    <main>
+    <mark>
+    <nav>
+    <section>   (add another div like thing into a div called section)
+    <summary>
+    <time>
+
+<hr>
+
+IMAGE MAPS : when you want to add multiple links to a image and you can also define the arean so now :)
+<pre>
+    ________________________
+    |(a,b)                  |
+    |                       |   suppose this is a rectrangle so we
+    |                       |   will require coordinates of two ends 
+    |                       |   line (a,b) and (c,d)
+    |                       |
+    |                       |
+    |                       |
+    |                       |
+    ____________________(c,d)
+
+</pre>    
+
+steps : add a image - then in map tag give it a name - then define areas in area tag 
+you can use imagemap generator on google
+
+<img src="..." alt="" usemap="#name">
+ <map name="name"> 
+    <area shape="rect" coords="a,b,c,d" href="#" alt="#">
+    <area shape="rect" coords="a,b,c,d" href="#" alt="#">
+</map>
+
+<hr>
+
+FORM IN HTML 
+<form action="...">
+
+    <!-- "required" is an attribute which is useed to make a mandatary input -->
+    <!-- autofocus is used when you want the curser already -->
+    <!-- autocomplete="on" is an attribute used when you can give suggesions on the basis of
+        previous form filled by user AND BY DEFAULT IT IS CONSIDERED "ON" -->
+    <div>
+        text : <input type="text">
+        <!-- placeholder is used to show what to type  -->
+        text : <input type="text" placeholder="enter a text">
+    </div>
+
+    <div>
+        submit : <input type="submit">
+    </div>
+
+    <div>
+        color : <input type="color">
+    </div>
+
+    <div>
+        date : <input type="date">
+    </div>
+
+    <div>
+        email : <input type="email">
+    </div>
+
+    <div>
+        <input type="hidden" value="...">
+        <!-- for example you have obtained location of user from browseer and 
+            you dont want to show user you can directly add it as hidden -->
+    </div>
+    
+    <div>
+        number : <input type="number">
+        <!-- to increment by 2 on each click use step="2" and to add a by defaullt value use value="..." -->
+        number : <input type="number" step="2" value="1">
+    </div>
+
+    <div>
+        password : <input type="password">
+    </div>
+
+    <div>
+        reset : <input type="reset">
+    </div>
+
+    <div>
+        time : <input type="time">
+    </div>
+
+    <div>
+        url : <input type="url">
+    </div>
+
+    <div>
+        range : <input type="range" min="..." max="...">
+    </div>
+
+    <!-- upload fikes in your form -->
+    <div>
+        <input type="file">
+        <!-- to upload multiple files  -->
+        <input type="file" multiple >
+    </div>
+
+    <!-- when you want to add a are for description  -->
+
+    <div>
+        <textarea name="..." id="..." cols="30" rows="10"></textarea>
+        <input type="image" src="..." height="..." width="..." >
+    </div>
+
+    <!-- adding options  -->
+
+    <div>
+        <!-- use "selected" attribute in any "option tag" for makin it a default -->
+        <select>
+            <option value="audi"> audi </option>
+            <option value="audi"> audi </option>
+            <option value="audi"> audi </option>
+        </select>
+    </div>
+
+    <!-- radio button : button which is like mcq -->
+
+    <div>
+        <input type="radio" value="..."> one
+        <input type="radio" value="..."> two
+        <input type="radio" value="..."> three
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
