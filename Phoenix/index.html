@@ -11,108 +11,151 @@
 
 <body>
     <div class="main">
-        <div class="logo"></div>
-        <div id="heading"><h1>Phoenix Int.</h1></div>
+        <div class="logo">
+            <img src="./images/phoenix.png" alt="phoenix" width="300px">
+        </div>
+        <div id="heading">
+            <h1>Phoenix Int.</h1>
+        </div>
         <div class="desc"> <br>
-            <span><p>Single app for all AI Driven</p> 
-                <p>Insights for <i>profitable</i> and</p> 
+            <span>
+                <p>Single app for all AI Driven</p>
+                <p>Insights for <i>profitable</i> and</p>
                 <p><i>accurate</i> trades</p>
             </span>
         </div>
-        <a id="get_started" href="#tp1">
+        <a id="get_started" href="#tutorial">
             <span id="started">
                 Get Started
             </span>
         </a>
     </div>
 
-    <div class="intro" id="Intro">
+<!-- tutorial page !! -->
+    <div class="tutorial" id="tutorial">
+
         <nav class="nav">
-            <div class="home"></div>
-            <div class="view"></div>
-            <div class="info"></div>
+        <a href="#tp1">
+            <div class="home">
+                <img src="./images/home.png" width="70px" alt="Hoem">
+            </div>
+        </a>
+        <a href="#">
+            <div class="view">
+                <img src="./images/Info.png" width="70px" alt="Hoem">
+            </div>
+        </a>
+        <a href="#">
+            <div class="info">
+                <img src="./images/graph.png" width="70px" alt="Hoem">
+            </div>
+        </a>
         </nav>
 
-        <!-- to = tour page -->
-        <div class="tp1" id="tp1">
-            <div class="tp1content">
-                <span id="head">
-                    <p>Lets take a tour.</p>
+        <div class="tp">
+            <div class="tp1" id="tp1">
+                <span class="headtp">
+                    Let's take a tour.
                 </span>
-                <div class="current">
-                    <i id="tp">a</i>
-                    <i id="tp">b</i>
-                    <i id="tp">c</i>
-                    <i id="tp">d</i>
-                    <i id="tp">e</i>
+                <div class="navpt">
+                    <i id="pt">a</i>
+                    <i id="pt">b</i>
+                    <i id="pt">c</i>
+                    <i id="pt">d</i>
+                    <i id="pt">e</i>
                 </div>
-                <a id="get_started" href="#tp2"><span id="started">Get Started</span></a>
-                <div class="image">GRAPH</div>
-                <div class="emoji">EYES</div>
+                <a class="tpbtn" onclick="disable_main()" href="#tp2"><span id="tpbtn">Get Started</span></a>
             </div>
-        </div>
-
-        <div class="tp2" id="tp2">
-            <div class="tp2content">
-                <span id="head">
-                    <p>Al Insights</p>
+            
+            <div class="tp2" id="tp2">
+                <span class="headtp">
+                    AI Insights
                 </span>
-                <div class="current">
-                    <i id="tp">a</i>
-                    <i id="tp">b</i>
-                    <i id="tp">c</i>
-                    <i id="tp">d</i>
-                    <i id="tp">e</i>
+                <div class="navpt">
+                    <i id="pt">a</i>
+                    <i id="pt">b</i>
+                    <i id="pt">c</i>
+                    <i id="pt">d</i>
+                    <i id="pt">e</i>
                 </div>
-                <div class="image">
+                <span style="font-size: 3em; font-weight:bold; color: white;">
                     <p>Insights of top performing</p>
-                    <p>trades usign AI</p>
-                </div>
-                <a id="get_started" href="#tp3"><span id="started">Next</span></a>
-                <div class="emoji">EYES</div>
-            </div>
-        </div>
-
-        <div class="tp3" id="tp3">
-            <div class="tp3content">
-                <span id="head">
-                    <p>Lets take a tour.</p>
+                    <p style="display: inline;">trades using <i id="purp-text">AI</i></p>
                 </span>
-                <div class="current">
-                    <i id="tp">a</i>
-                    <i id="tp">b</i>
-                    <i id="tp">c</i>
-                    <i id="tp">d</i>
-                    <i id="tp">e</i>
-                </div>
-                <a id="get_started" href="#tp4"><span id="started">Next</span></a>
-                <div class="image">GRAPH</div>
-                <div class="emoji">EYES</div>
+                <a class="tpbtn" href="#tp3"><span id="tpbtn">Next</span></a>
             </div>
-        </div>
 
-        <div class="tp4" id="tp4">
-            <div class="tp4content">
-                <span id="head">
-                    <p>Lets take a tour.</p>
+            <div class="tp3" id="tp3">
+                <span class="headtp">
+                    Simple
                 </span>
-                <div class="current">
-                    <i id="tp">a</i>
-                    <i id="tp">b</i>
-                    <i id="tp">c</i>
-                    <i id="tp">d</i>
-                    <i id="tp">e</i>
+                <div class="navpt">
+                    <i id="pt">a</i>
+                    <i id="pt">b</i>
+                    <i id="pt">c</i>
+                    <i id="pt">d</i>
+                    <i id="pt">e</i>
                 </div>
-                <a id="get_started" href="#Intro"><span id="started">Sign In/Sign Up</span></a>
-                <div class="image">GRAPH</div>
-                <div class="emoji">EYES</div>
+                <span>
+                    <p style="font-size: 3em; margin-top:5%; color:white;">Decluttered Inteface</p>
+                </span>
+                <a class="tpbtn" href="#tp4"><span id="tpbtn">Next</span></a>
             </div>
+            
+            <div class="tp4" id="tp4">
+                <span class="headtp">
+                    Fast
+                </span>
+                <div class="navpt">
+                    <i id="pt">a</i>
+                    <i id="pt">b</i>
+                    <i id="pt">c</i>
+                    <i id="pt">d</i>
+                    <i id="pt">e</i>
+                </div>
+                <span style="font-size: 3em; margin-top:5%; color:white;">
+                    <p>Superfast Loading <i id="purp-text">don't</i></p>
+                    <p style="color: white;"><i id="purp-text">Waste time</i> is sluggish apps.</p>
+                </span>
+                <a class="tpbtn" href="#tp5"><span id="tpbtn">Next</span></a>
+            </div>
+
+            <div class="tp5" id="tp5">
+                <span class="headtp">
+                    Accurate
+                </span>
+                <div class="navpt">
+                    <i id="pt">a</i>
+                    <i id="pt">b</i>
+                    <i id="pt">c</i>
+                    <i id="pt">d</i>
+                    <i id="pt">e</i>
+                </div>
+                <span style="font-size: 3em; margin-top:5%; color:white;">
+                    <p>Accurate insights, thst help</p>
+                    <p>you win. WIN BIG!</p>
+                </span>
+                <a class="tpbtn" href="./login.html" onclick="enable_tutorial()"><span id="tpbtn">LogIn / Sign Up</span></a>
+            </div>
+
+
         </div>
 
     </div>
-    </div>
-    </div>
-
 </body>
+<script>
+    let main = document.querySelector('.main');
+    let tutorial = document.querySelector('.tutorial');
+
+
+    function disable_main() {
+        main.setAttribute("class", "disable");
+        tutorial.setAttribute('class', 'tutorial')
+    }
+    function enable_tutorial() {
+        tutorial.setAttribute('class','disable');
+        main.setAttribute('class', 'main')
+    }
+</script>
 
 </html>

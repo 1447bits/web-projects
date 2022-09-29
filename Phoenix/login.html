@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body *{
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body {
+            background-color: #252525;
+        }
+        .bg {
+            border-radius:50% ;
+            position: absolute;
+        }
+        .bg1 {
+            width: 20%;
+            right: 10%;
+            top:15%
+        }
+        .bg2 {
+            width: 30%;
+            left: 15%;
+            top:40%
+        }
+        .form * :active{
+            border: dashed rgba(0, 0, 0, 0.452) 2px;
+        }
+        .form * {
+            background: transparent;
+            border: none;
+            margin: auto;
+            width: 50%;
+            margin-top: 2%;
+            color: white;
+        }
+        .form {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            position: relative;
+            margin-top: 15%;
+            margin-inline: auto ;
+            padding: 2%;
+            border: solid rgba(148, 148, 148, 0.397) 4px;
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.226);
+            backdrop-filter: blur(10px);
+        }
+        #login-btn:active {
+            transform:scale(0.9);
+        }
+        #login-btn {
+            width: 25%;
+            cursor:pointer;
+            background-color: #B388F5;
+            border-radius: 32px;
+            padding: 2%;
+            margin-top: 5%;
+        }
+        #user-pass:focus, #user-email:focus, #user-name:focus, #user-DOB:focus {
+            border: unset;
+            box-shadow: unset;
+
+        }
+    </style>
+</head>
+<body>
+    <img class="bg1 bg" src="./images/bubble.png" alt="">
+    <img class="bg2 bg" src="./images/bubble.png" alt="">
+    
+    <div class="form">
+        <h1 style="text-align:center; font-size: 2em; color: rgba(248, 57, 248, 0.562);">
+            Login / Sign Up
+        </h1>
+        <input type="text" placeholder="Enter Useranme" name="user-naem" id="user-name">
+        <input type="email" placeholder="Enter Email" name="user-email" id="user-email">
+        <label for="user-DOB">D.O.B
+            <input type="date" style="margin-left: 3%;" name="user-DOB" id="user-DOB">
+        </label>
+        <input type="password" placeholder="Enter Password" name="user-pass" id="user-pass">
+        <input type="password" placeholder="confirm Password" name="user-pass" id="user-pass">
+
+        <button id="login-btn">Log in</button>
+    </div>
+
+
+</body>
+</html>
