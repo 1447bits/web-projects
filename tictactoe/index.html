@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>TicTacToe</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+</head>
+
+<body>
+    <div class="main" id="main">
+        <h1 id="website-title">TicTacToe</h1>
+        <h4>Currently its 2 player <br>In Other words i was too lazy to train the model</h4>
+        <span id="turnDisplay">
+            <p id="Player-1-text">Player 1</p>
+            <p id="Player-2-text">Player 2</p>
+        </span>
+        <div id="main-box">
+            <div id="11" class="box" onclick="move(this)" data-id="11"></div>
+            <div id="12" class="box" onclick="move(this)" data-id="12"></div>
+            <div id="13" class="box" onclick="move(this)" data-id="13"></div>
+            <div id="21" class="box" onclick="move(this)" data-id="21"></div>
+            <div id="22" class="box" onclick="move(this)" data-id="22"></div>
+            <div id="23" class="box" onclick="move(this)" data-id="23"></div>
+            <div id="31" class="box" onclick="move(this)" data-id="31"></div>
+            <div id="32" class="box" onclick="move(this)" data-id="32"></div>
+            <div id="33" class="box" onclick="move(this)" data-id="33"></div>
+        </div>
+        <div id="reset">
+            <p>new game starts in </p>
+            <p id="resettimer">0 s</p>
+        </div>
+    </div>
+</body>
+<script src="./index.js" type="text/javascript"></script>
+
+</html>
